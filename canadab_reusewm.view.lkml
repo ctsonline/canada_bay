@@ -1,5 +1,5 @@
-view: canadab_wm {
-sql_table_name: public.canadabay_water_meters ;;
+view: canadab_reusewm {
+sql_table_name: public.canadabay_recycled_wm ;;
 
   dimension: Value{
     label: "Meter Values"

@@ -1,5 +1,5 @@
-view: canadab_wm {
-sql_table_name: public.canadabay_water_meters ;;
+view: canadab_power {
+ sql_table_name: public.canadabay_power_wm ;;
 
   dimension: Value{
     label: "Meter Values"
@@ -98,7 +98,8 @@ sql_table_name: public.canadabay_water_meters ;;
   dimension: time_8am_8am {
     label: "time 8am - 8am"
     type:string
-    sql:(trunc_days(${centpark_water_meters.reading_time}) = add_days(-1,trunc_days(now())) AND extract_hours(${centpark_water_meters.reading_time}) >= 8) OR (trunc_days(${centpark_water_meters.reading_time}) = trunc_days(now()) AND extract_hours(${centpark_water_meters.reading_time}) < 8);;
+    sql:(trunc_days(${canadabay_power_wm.reading_time}) = add_days(-1,trunc_days(now())) AND extract_hours(${canadabay_power_wm.reading_time}) >= 8)
+    OR (trunc_days(${canadabay_power_wm.reading_time}) = trunc_days(now()) AND extract_hours(${canadabay_power_wm.reading_time}) < 8);;
   }
 
   dimension: v1 {
