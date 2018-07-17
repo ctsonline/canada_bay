@@ -95,12 +95,12 @@ view: canadab_power {
 
   }
 
-  dimension: time_8am_8am {
-    label: "time 8am - 8am"
-    type:string
-    sql:(trunc_days(${canadabay_power_wm.reading_time}) = add_days(-1,trunc_days(now())) AND extract_hours(${canadabay_power_wm.reading_time}) >= 8)
-    OR (trunc_days(${canadabay_power_wm.reading_time}) = trunc_days(now()) AND extract_hours(${canadabay_power_wm.reading_time}) < 8);;
-  }
+  ##dimension: time_8am_8am {
+    ##label: "time 8am - 8am"
+   # type:string
+   # sql:(trunc_days(${canadb_power.reading_time}) = add_days(-1,trunc_days(now())) AND extract_hours(${canadab_power.reading_time}) >= 8)
+   #  OR (trunc_days(${canadab_power.reading_time}) = trunc_days(now()) AND extract_hours(${canadab_power.reading_time}) < 8);;
+ # }
 
   dimension: v1 {
     hidden: yes

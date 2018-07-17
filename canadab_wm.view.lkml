@@ -98,8 +98,8 @@ sql_table_name: public.canadabay_water_meters ;;
   dimension: time_8am_8am {
     label: "time 8am - 8am"
     type:string
-    sql:(trunc_days(${canadabay_water_meters.reading_time}) = add_days(-1,trunc_days(now())) AND extract_hours(${canadabay_water_meters.reading_time}) >= 8)
-    OR (trunc_days(${canadabay_water_meters.reading_time}) = trunc_days(now()) AND extract_hours(${canadabay_water_meters.reading_time}) < 8);;
+    sql:(trunc_days(${canadab_wm.reading_time}) = add_days(-1,trunc_days(now())) AND extract_hours(${canadab_wm.reading_time}) >= 8)
+    OR (trunc_days(${canadab_wm.reading_time}) = trunc_days(now()) AND extract_hours(${canadab_wm.reading_time}) < 8);;
   }
 
   dimension: v1 {

@@ -98,8 +98,8 @@ sql_table_name: public.canadabay_recycled_wm ;;
   dimension: time_8am_8am {
     label: "time 8am - 8am"
     type:string
-    sql:(trunc_days(${canadabay_recycled_wm.reading_time}) = add_days(-1,trunc_days(now())) AND extract_hours(${canadabay_recycled_wm.reading_time}) >= 8)
-    OR (trunc_days(${canadabay_recycled_wm.reading_time}) = trunc_days(now()) AND extract_hours(${canadabay_recycled_wm.reading_time}) < 8);;
+    sql:(trunc_days(${canadab_reusewm.reading_time}) = add_days(-1,trunc_days(now())) AND extract_hours(${canadab_reusewm.reading_time}) >= 8)
+    OR (trunc_days(${canadab_reusewm.reading_time}) = trunc_days(now()) AND extract_hours(${canadab_reusewm.reading_time}) < 8);;
   }
 
   dimension: v1 {
