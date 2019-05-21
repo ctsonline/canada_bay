@@ -21,3 +21,7 @@ explore: canadab_reusewm {
 explore: canadab_power {
   label: "Canada Bay Power Meters"
 }
+
+explore: canada_lights {
+  label: "Canada Bay Lights"
+}
